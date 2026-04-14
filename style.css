@@ -1910,6 +1910,14 @@ input, textarea {
   /* Buttons */
   .hero-actions { flex-direction: column; width: 100%; }
   .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+
+  /* Utilities */
+  .hero-scroll {
+    width: 100%;
+    left: 0;
+    transform: none;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
