@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KARIO — AI-Powered Solutions for Car Brokers</title>
+  <meta name="description" content="KARIO builds premium car broker websites and integrates AI chatbots that capture leads and forward them via email, WhatsApp, Telegram, and internal dashboards.">
+  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <!-- 3D Engine Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+</head>
+<body>
+  <!-- ═══ 3D WEBGL BACKGROUND ═══ -->
+  <div id="vanta-bg"></div>
+  <div class="bg-grain"></div>
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#hero" class="navbar-logo">KARIO</a>
+      <ul class="navbar-links">
+        <li><a href="#problems">Reality</a></li>
+        <li><a href="#services">Solution</a></li>
+        <li><a href="#testimonials">Opinions</a></li>
+        <li><a href="#demo">Action</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="https://calendly.com/kario_/free-ai-consultation" target="_blank" class="navbar-cta">Book Consultation</a>
+      <div class="hamburger" id="hamburger" onclick="toggleMobileNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#problems" onclick="closeMobileNav()">Reality</a>
+    <a href="#services" onclick="closeMobileNav()">Solution</a>
+    <a href="#testimonials" onclick="closeMobileNav()">Opinions</a>
+    <a href="#demo" onclick="closeMobileNav()">Action</a>
+    <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  </div>
+
+
+  <!-- ═══ Hero ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge pulsing">
+        <span class="dot"></span>
+        Now Accepting Partners
+      </div>
+      <h1 class="hero-title">
+        Turn Your Website Into a
+        <span class="hero-title-accent">Client-Getting Machine</span>
+      </h1>
+      <p class="hero-tagline">We upgrade your website and add AI that talks to visitors, asks the right questions, and turns them into paying clients.</p>
+      <div class="hero-actions">
+        <a href="https://calendly.com/kario_/free-ai-consultation" target="_blank" class="btn-primary">Book Your Free AI Consultation</a>
+        <a href="#demo" class="btn-secondary">See It in Action</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ═══ Trusted By (Brands Bar) ═══ -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-inner">
+        <span class="trust-accent">Trusted by</span>
+      <div class="brand-ticker">
+        <span class="brand-item">Apex Automotive</span>
+        <span class="brand-item">Monaco Elite</span>
+        <span class="brand-item">Velocity Customs</span>
+        <span class="brand-item">KARABA</span>
+        <span class="brand-item">Heritage Classics</span>
+        <!-- Duplicate for loop -->
+        <span class="brand-item">Apex Automotive</span>
+        <span class="brand-item">Monaco Elite</span>
+        <span class="brand-item">Velocity Customs</span>
+        <span class="brand-item">KARABA</span>
+        <span class="brand-item">Heritage Classics</span>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ The Problem (Invisible Leaks) ═══ -->
+  <section class="section problems" id="problems">
+    <div class="container">
+      <span class="section-label reveal">The Struggle</span>
+      <h2 class="section-title reveal">These invisible leaks are<br>killing your business</h2>
+      <p class="section-subtitle reveal">Most brokers don't realize how many deals they lose before even speaking to a client.</p>
+
+      <div class="problems-list">
+        <div class="problem-item reveal">
+          <span class="problem-num">01</span>
+          <p>You waste hours on people who never buy.</p>
+        </div>
+        <div class="problem-item reveal">
+          <span class="problem-num">02</span>
+          <p>Serious buyers leave because your site feels outdated.</p>
+        </div>
+        <div class="problem-item reveal">
+          <span class="problem-num">03</span>
+          <p>Visitors come… and disappear without contacting you.</p>
+        </div>
+        <div class="problem-item reveal">
+          <span class="problem-num">04</span>
+          <p>You miss clients just because you didn’t reply fast enough.</p>
+        </div>
+        <div class="problem-item reveal">
+          <span class="problem-num">05</span>
+          <p>You repeat the same questions every day instead of closing deals.</p>
+        </div>
+        <div class="problem-item reveal">
+          <span class="problem-num">06</span>
+          <p>Hot buyers slip away while you’re busy or offline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ The Solution (Single Unified Service) ═══ -->
+  <section class="section solution-prime" id="services">
+    <div class="container">
+      <span class="section-label reveal">The Edge</span>
+      <h2 class="section-title reveal">Done-for-you AI website that<br>brings ready-to-buy car buyers</h2>
+      
+      <div class="solution-content">
+        <div class="solution-main reveal">
+          <ul class="solution-points">
+            <li>Modern, fast, mobile-friendly website</li>
+            <li>AI talks to every visitor 24/7</li>
+            <li>Only serious, ready-to-buy clients reach you</li>
+            <li>Automatic booking with qualified buyers</li>
+            <li>No wasted time or missed opportunities</li>
+            <li>More paying car clients</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ Problem → Solution Comparison ═══ -->
+  <section class="section comparison">
+    <div class="container">
+      <div class="comparison-grid">
+        <!-- Card 1 -->
+        <div class="comparison-card reveal">
+          <div class="comp-problem">
+            <span class="comp-label">Manual</span>
+            <h3>Painful manual follow-up</h3>
+            <p>You lose hours chasing people who aren't ready or don't have the budget.</p>
+          </div>
+          <div class="comp-solution">
+            <span class="comp-label">AI-Powered</span>
+            <h3>Automated Qualification</h3>
+            <p>Our AI asks the right questions 24/7 and only forwards clients who are ready to buy today.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="comparison-card reveal">
+          <div class="comp-problem">
+            <span class="comp-label">Manual</span>
+            <h3>Empty Contact Forms</h3>
+            <p>Standard forms are boring. Visitors leave instead of filling them out.</p>
+          </div>
+          <div class="comp-solution">
+            <span class="comp-label">AI-Powered</span>
+            <h3>Conversational Capture</h3>
+            <p>AI engages visitors naturally, capturing their data before they have a chance to leave.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="comparison-card reveal">
+          <div class="comp-problem">
+            <span class="comp-label">Manual</span>
+            <h3>Slow response times</h3>
+            <p>If you don't reply within 5 minutes, the hot buyer is already on a competitor's site.</p>
+          </div>
+          <div class="comp-solution">
+            <span class="comp-label">AI-Powered</span>
+            <h3>Instant 0-Second Reply</h3>
+            <p>AI talks to them the second they land, so you never lose a client to "radio silence" again.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="comparison-card reveal">
+          <div class="comp-problem">
+            <span class="comp-label">Manual</span>
+            <h3>The "Ghost" Site</h3>
+            <p>Your current website is just a static brochure that doesn't actually work for you.</p>
+          </div>
+          <div class="comp-solution">
+            <span class="comp-label">AI-Powered</span>
+            <h3>The Client Machine</h3>
+            <p>We turn your site into a high-performance system that captures and books leads on autopilot.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ Demo Chatbot ═══ -->
+  <section class="section demo-section" id="demo">
+    <div class="container">
+      <span class="section-label reveal">Live Demo</span>
+      <h2 class="section-title reveal">See the AI in action</h2>
+      <p class="section-subtitle reveal">This is exactly what your website visitors will experience. Try it yourself</p>
+
+      <div class="examples-grid">
+        <!-- Example 1 -->
+        <div class="example-card reveal reveal-delay-1">
+          <div class="example-img-wrap">
+            <img src="images/engagement.png" alt="AI Engagement">
+          </div>
+          <div class="example-info">
+            <span class="example-num">01</span>
+            <h3>Instant Engagement</h3>
+            <p>The AI greets every visitor instantly, starting a natural conversation about their preferences.</p>
+          </div>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-card reveal reveal-delay-2">
+          <div class="example-img-wrap">
+            <img src="images/qualification.png" alt="AI Qualification">
+          </div>
+          <div class="example-info">
+            <span class="example-num">02</span>
+            <h3>Smart Qualification</h3>
+            <p>The bot identifies buyer needs, budget, and timeline to filter for serious inquiries.</p>
+          </div>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-card reveal reveal-delay-3">
+          <div class="example-img-wrap">
+            <img src="images/capture.png" alt="Lead Capture">
+          </div>
+          <div class="example-info">
+            <span class="example-num">03</span>
+            <h3>Secure Data Capture</h3>
+            <p>Names, emails, and phone numbers are collected naturally through the flow.</p>
+          </div>
+        </div>
+
+        <!-- Example 4 -->
+        <div class="example-card reveal reveal-delay-4">
+          <div class="example-img-wrap">
+            <img src="images/routing.png" alt="Lead Routing">
+          </div>
+          <div class="example-info">
+            <span class="example-num">04</span>
+            <h3>Instant Routing</h3>
+            <p>New leads land directly in your WhatsApp or TelegramChannel the second they finish the chat.</p>
+          </div>
+        </div>
+
+        <!-- Example 5 -->
+        <div class="example-card reveal reveal-delay-5">
+          <div class="example-img-wrap">
+            <img src="images/conversion.png" alt="Conversion">
+          </div>
+          <div class="example-info">
+            <span class="example-num">05</span>
+            <h3>Seamless Handover</h3>
+            <p>You get a complete profile of the buyer, ready for you to step in and close the deal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <span class="section-label reveal">Results</span>
+      <h2 class="section-title reveal">What brokers<br>actually say</h2>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <p>"I was spending 4 hours a day on WhatsApp. Now AI does the filtering and I just close deals."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Marcus Ross</strong>
+              <span>Founder, Apex Auto</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p>"Paid for itself in 14 days. It’s like having a 24/7 sales assistant who never sleeps."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Elena Vance</strong>
+              <span>Monaco Elite Brokers</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p>"Finally an AI site that doesn't look cheap. It feels like a custom watch. Clients notice."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Julian Thorne</strong>
+              <span>Director, Velocity Customs</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p>"Filtered out two major tire-kickers just this morning. Exactly what every broker needs."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>David Chen</strong>
+              <span>KARABA Group</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p>"Zero stress. My WhatsApp is finally quiet until it’s a serious buyer. Total bliss."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Leo Banks</strong>
+              <span>Heritage Classics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ═══ Consultation Section ─────────────────────────────── -->
+  <section class="section consultation" id="consultation">
+    <div class="container">
+      <div class="consultation-card reveal">
+        <span class="section-label">Limited Availability</span>
+        <h2>Book Your Free AI Consultation</h2>
+        <p>In 30 minutes, we’ll show you exactly where your website is losing clients and how to fix it with AI. No fluff, just results.</p>
+        <a href="https://calendly.com/kario_/free-ai-consultation" target="_blank" class="btn-primary">Secure Your Slot Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Contact ═══ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <span class="section-label reveal">Get In Touch</span>
+      <h2 class="section-title reveal">Ready to elevate<br>your business</h2>
+      <p class="section-subtitle reveal">Partner with KARIO and transform how you capture automotive leads</p>
+
+      <div class="contact-layout">
+        <div class="contact-info reveal">
+          <h3>Let's build something exceptional.</h3>
+          <p>Whether you need a premium website, an AI chatbot, or both — we're here to make it happen. Reach out and let's discuss your vision.</p>
+          <ul class="contact-details">
+            <li>
+              <div class="contact-detail-icon">✉</div>
+              <div class="contact-detail-text">
+                <span>Email</span>
+                <span>hello@kario.pro</span>
+              </div>
+            </li>
+            <li>
+              <div class="contact-detail-icon">◉</div>
+              <div class="contact-detail-text">
+                <span><a href="https://instagram.com/kariomedia" target="_blank">Instagram</a></span>
+              </div>
+            </li>
+            <li>
+              <div class="contact-detail-icon">𝕏</div>
+              <div class="contact-detail-text">
+                <span><a href="https://x.com/kariomediax" target="_blank">X (Twitter)</a></span>
+              </div>
+            </li>
+            <li>
+              <div class="contact-detail-icon">⚡</div>
+              <div class="contact-detail-text">
+                <span>Response Time</span>
+                <span>Instant on Socials</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal reveal-delay-1" id="contactForm" onsubmit="submitContact(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Full Name</label>
+              <input type="text" id="contactName" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactCompany">Company / Brand</label>
+            <input type="text" id="contactCompany" placeholder="Your car brokerage">
+          </div>
+          <div class="form-group">
+            <label for="contactPhone">Phone Number (Optional)</label>
+            <input type="tel" id="contactPhone" placeholder="+1 (555) 000-0000">
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">KARIO</div>
+          <p>AI-powered solutions engineered for automotive excellence.</p>
+        </div>
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#problems">Reality</a></li>
+              <li><a href="#services">Solution</a></li>
+              <li><a href="#testimonials">Opinions</a></li>
+              <li><a href="#demo">Action</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">Website Development</a></li>
+              <li><a href="#services">AI Integration</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="https://instagram.com/kariomedia" target="_blank">Instagram</a></li>
+              <li><a href="https://x.com/kariomediax" target="_blank">X (Twitter)</a></li>
+              <li><a href="https://calendly.com/kario_/free-ai-consultation" target="_blank">Book Call</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 KARIO. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://x.com/kariomediax" target="_blank" title="X (Twitter)">𝕏</a>
+          <a href="https://instagram.com/kariomedia" target="_blank" title="Instagram">◉</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+  <!-- ═══ PERFECT AI CONCIERGE (Embedded for 100% Stability) ═══ -->
+  <style>
+    .kario-chat-trigger {
+      position: fixed !important;
+      bottom: 30px !important;
+      right: 30px !important;
+      width: 60px !important;
+      height: 60px !important;
+      background: #00E676 !important;
+      color: #000 !important;
+      border-radius: 50% !important;
+      cursor: pointer !important;
+      z-index: 1000000 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-shadow: 0 10px 40px rgba(0, 230, 118, 0.4) !important;
+      transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1) !important;
+    }
+    .kario-chat-window {
+      position: fixed !important;
+      bottom: 105px !important;
+      right: 30px !important;
+      width: 360px !important;
+      height: 520px !important;
+      background: #0d0d0d !important;
+      border: 1px solid rgba(255,255,255,0.1) !important;
+      border-radius: 20px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      z-index: 1000000 !important;
+      box-shadow: 0 20px 80px rgba(0,0,0,0.8) !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: translateY(30px) scale(0.95) !important;
+      transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1) !important;
+      overflow: hidden !important;
+    }
+    .kario-chat-window.active {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) scale(1) !important;
+    }
+    .kario-chat-header {
+      padding: 16px 24px !important;
+      background: #111 !important;
+      border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+    }
+    .kario-chat-status { display: flex !important; align-items: center !important; gap: 10px !important; }
+    .status-dot { width: 8px !important; height: 8px !important; background: #00E676 !important; border-radius: 50% !important; box-shadow: 0 0 10px #00E676 !important; }
+    .kario-chat-header strong { display: block !important; font-size: 0.9rem !important; color: #fff !important; }
+    .kario-chat-header span { font-size: 0.7rem !important; color: #00E676 !important; }
+    .kario-chat-close { background: none !important; border: none !important; color: #555 !important; font-size: 24px !important; cursor: pointer !important; }
+    .kario-chat-messages { flex: 1 !important; padding: 20px !important; overflow-y: auto !important; display: flex !important; flex-direction: column !important; gap: 12px !important; background: #0a0a0a !important; }
+    .chat-msg { max-width: 85% !important; padding: 10px 14px !important; border-radius: 12px !important; font-size: 0.85rem !important; line-height: 1.4 !important; }
+    .chat-msg.bot { background: #1c1c1c !important; color: #fff !important; align-self: flex-start !important; }
+    .chat-msg.user { background: #00E676 !important; color: #000 !important; align-self: flex-end !important; font-weight: 600 !important; }
+    .kario-chat-typing { padding: 12px 20px !important; display: flex !important; gap: 4px !important; align-items: center !important; }
+    .kario-chat-typing span { width: 6px !important; height: 6px !important; background: #444 !important; border-radius: 50% !important; animation: typeBounce 1.4s infinite !important; }
+    .kario-chat-typing span:nth-child(2) { animation-delay: 0.2s !important; }
+    .kario-chat-typing span:nth-child(3) { animation-delay: 0.4s !important; }
+    @keyframes typeBounce { 0%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-6px); } }
+    .kario-chat-footer { padding: 16px !important; background: #111 !important; border-top: 1px solid rgba(255,255,255,0.05) !important; }
+    .kario-chat-input-wrapper { background: #1c1c1c !important; border: 1px solid #333 !important; border-radius: 10px !important; display: flex !important; padding: 4px 4px 4px 12px !important; }
+    #chatInput { flex: 1 !important; background: transparent !important; border: none !important; color: #fff !important; outline: none !important; padding: 6px 0 !important; }
+    #chatSend { background: #00E676 !important; color: #000 !important; border: none !important; padding: 8px 12px !important; border-radius: 6px !important; cursor: pointer !important; font-weight: bold !important; }
+    @media (max-width: 480px) { .kario-chat-window { width: calc(100vw - 30px) !important; right: 15px !important; bottom: 90px !important; } }
+  </style>
+
+  <div class="kario-chat-trigger" id="chatTrigger">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+  </div>
+
+  <div class="kario-chat-window" id="chatWindow">
+    <div class="kario-chat-header">
+      <div class="kario-chat-status">
+        <div class="status-dot"></div>
+        <div>
+          <strong>KARIO AI</strong>
+          <span>Online & Ready</span>
+        </div>
+      </div>
+      <button class="kario-chat-close" id="chatClose">×</button>
+    </div>
+    <div class="kario-chat-messages" id="chatMessages"></div>
+    <div class="kario-chat-typing" id="chatTyping" style="display: none;">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="kario-chat-footer">
+      <div class="kario-chat-input-wrapper">
+        <input type="text" id="chatInput" placeholder="Ask anything..." autocomplete="off">
+        <button id="chatSend">SEND</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js?v=21"></script>
+  <div class="custom-cursor"></div>
+</body>
+</html>
