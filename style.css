@@ -1882,5 +1882,38 @@ input, textarea {
   pointer-events: none;
 }
 
+/* ── MOBILE UX OPTIMIZATION MASTER BLOCK ────────────────── */
+@media (max-width: 768px) {
+  /* Core Sizing */
+  html { font-size: 14px; }
+  .section { padding: 70px 0 !important; }
+  .hero { padding: 120px 0 60px !important; min-height: auto; }
+  .container { padding: 0 16px; }
 
+  /* Typography */
+  .hero-title { font-size: 2.4rem; line-height: 1.1; }
+  .hero-tagline { font-size: 1.05rem; margin-bottom: 32px; }
+  .section-title { font-size: 1.8rem; }
+  .section-subtitle { font-size: 0.95rem; }
 
+  /* Layout Stacking */
+  .contact-layout, .demo-layout, .footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .demo-info { position: static; }
+  .examples-grid, .testimonials-grid, .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Buttons */
+  .hero-actions { flex-direction: column; width: 100%; }
+  .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 2rem; }
+  .section-title { font-size: 1.6rem; }
+  .section { padding: 50px 0 !important; }
+}

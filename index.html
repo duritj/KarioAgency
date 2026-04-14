@@ -549,7 +549,12 @@
     .kario-chat-input-wrapper { background: #1c1c1c !important; border: 1px solid #333 !important; border-radius: 10px !important; display: flex !important; padding: 4px 4px 4px 12px !important; }
     #chatInput { flex: 1 !important; background: transparent !important; border: none !important; color: #fff !important; outline: none !important; padding: 6px 0 !important; }
     #chatSend { background: #00E676 !important; color: #000 !important; border: none !important; padding: 8px 12px !important; border-radius: 6px !important; cursor: pointer !important; font-weight: bold !important; }
-    @media (max-width: 480px) { .kario-chat-window { width: calc(100vw - 30px) !important; right: 15px !important; bottom: 90px !important; } }
+    @media (max-width: 768px) { 
+      .kario-chat-window { width: calc(100vw - 32px) !important; right: 16px !important; bottom: 85px !important; height: 450px !important; } 
+      .kario-chat-header { padding: 12px 16px !important; }
+      .kario-chat-messages { padding: 16px !important; }
+      .chat-msg { font-size: 0.8rem !important; }
+    }
   </style>
 
   <div class="kario-chat-trigger" id="chatTrigger">
@@ -580,7 +585,7 @@
   </div>
 
   <script src="config.js"></script>
-  <script src="script.js?v=21"></script>
+  <script src="script.js?v=22"></script>
   <div class="custom-cursor"></div>
 </body>
 </html>
