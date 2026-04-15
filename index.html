@@ -6,6 +6,31 @@
   <title>KARIO — AI-Powered Solutions for Car Brokers</title>
   <meta name="description" content="KARIO builds premium car broker websites and integrates AI chatbots that capture leads and forward them via email, WhatsApp, Telegram, and internal dashboards.">
   <link rel="stylesheet" href="style.css?v=5">
+  <style>
+    .hero-disclaimer {
+      margin-top: 14px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    @media (max-width: 768px) {
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+      .btn-primary, .btn-secondary {
+        font-size: 0.82rem !important;
+        padding: 12px 18px !important;
+        text-align: center;
+      }
+      .hero-disclaimer {
+        font-size: 0.68rem;
+        text-align: center;
+      }
+    }
+  </style>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
   <!-- 3D Engine Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
@@ -62,6 +87,7 @@
         <a href="https://calendly.com/kario_/free-ai-consultation" target="_blank" class="btn-primary">Book Your Free AI Consultation</a>
         <a href="#demo" class="btn-secondary">See It in Action</a>
       </div>
+      <p class="hero-disclaimer">Car brokers only — not for general dealerships.</p>
     </div>
     <div class="hero-scroll">
       <span>Scroll</span>
