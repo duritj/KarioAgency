@@ -182,9 +182,9 @@ document.addEventListener('DOMContentLoaded', () => {
       scale: 1.00,
       scaleMobile: 1.00,
       color: 0x050505,
-      shininess: 35.00,
-      waveHeight: 15.00,
-      waveSpeed: 0.60,
+      shininess: 15.00,
+      waveHeight: 8.00,
+      waveSpeed: 0.20,
       zoom: 1.10
     });
   }

@@ -1866,6 +1866,7 @@ input, textarea {
   height: 100%;
   z-index: -2;
   background-color: #000000;
+  opacity: 0.3;
   pointer-events: none;
 }
 
