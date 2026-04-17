@@ -1663,10 +1663,11 @@ input, textarea {
 
 .comp-box {
   width: 100%;
-  aspect-ratio: 16/10;
   position: relative;
   overflow: hidden;
   background: #000;
+  display: flex;
+  align-items: flex-start;
 }
 
 .comp-box.dual-view {
@@ -1678,7 +1679,6 @@ input, textarea {
 .comp-box.dual-view .comp-img {
   position: relative;
   width: 50%;
-  height: 100%;
   clip-path: none;
 }
 
@@ -1696,9 +1696,8 @@ input, textarea {
 
 .comp-img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
+  display: block;
 }
 
 .comp-tag {
