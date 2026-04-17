@@ -223,15 +223,23 @@ const kTyping = document.getElementById('chatTyping');
 
 let kChatState = {
   isOpen: false,
-  step: 1, // 1: Name Capture, 2: Contact Capture, 3: Social Capture, 4: Finished
-  userData: { name: '', contact: '', extra: '' }
+  step: 1, // 1: Initial Ask, 2: Name Capture, 3: Contact Capture, 4: Social Capture, 5: Finished
+  userData: { name: '', contact: '', extra: '', initialRequest: '' }
 };
 
 function kToggle() {
   kChatState.isOpen = !kChatState.isOpen;
   kWindow.classList.toggle('active', kChatState.isOpen);
   
-  if (kChatState.isOpen && kChatState.step > 1 && kChatState.step < 4) {
+  // Initial Greeting when first opened
+  if (kChatState.isOpen && kChatState.step === 1 && kMessages.children.length === 0) {
+    setTimeout(async () => {
+      await kSimType(500);
+      kAddMsg("Hey! I'm KARIO AI, your agency assistant. 👋 How can I help you elevate your business today?");
+    }, 400);
+  }
+
+  if (kChatState.isOpen && kChatState.step > 2 && kChatState.step < 5) {
     // Re-engagement nudge ONLY if chat was already started and then reopened
     setTimeout(() => {
       kAddMsg("Ready to finish? Let's get your system live. 🏎️");
@@ -267,19 +275,19 @@ async function karioReply(text) {
   const input = text.toLowerCase();
 
   // 1. Specialized Service Handling (Only fallback if already finished)
-  if (kChatState.step >= 5) {
+  if (kChatState.step >= 6) {
     if (input.includes('service') || input.includes('offer') || input.includes('website')) {
       kAddMsg("We build custom elite websites and AI systems for brokers. But look, my partners have your info now and they'll give you the full breakdown soon! 🏎️");
       return;
     }
   }
 
-  // 2. State Machine (Streamlined Lead Capture)
+  // 2. State Machine (Conversational Lead Capture)
   if (kChatState.step === 1) {
-    // Initial engagement: Greet and ask for name
-    kAddMsg("Hey! I'm KARIO AI, your agency assistant. 👋 Great to have you here!");
+    kChatState.userData.initialRequest = text;
+    kAddMsg("That sounds like something we can definitely handle. 🏎️");
     await kSimType(800);
-    kAddMsg("How should I call you? Let's get your system live. 🏎️");
+    kAddMsg("To get you the right details, how should I call you?");
     kChatState.step = 2;
   } else if (kChatState.step === 2) {
     kChatState.userData.name = text;
@@ -288,8 +296,8 @@ async function karioReply(text) {
   } else if (kChatState.step === 3) {
     kChatState.userData.contact = text;
     
-    // PUSH 1: Name + Contact (Instant delivery)
-    const report1 = `<b>🔥 NEW LEAD (CONTACT)</b>\n\n<b>Name:</b> ${kChatState.userData.name}\n<b>Contact:</b> ${kChatState.userData.contact}\n\n<i>Waiting for social info...</i>`;
+    // PUSH 1: Name + Contact + Request (Instant delivery)
+    const report1 = `<b>🔥 NEW LEAD (CONVERSATIONAL)</b>\n\n<b>Name:</b> ${kChatState.userData.name}\n<b>Contact:</b> ${kChatState.userData.contact}\n<b>Request:</b> ${kChatState.userData.initialRequest}\n\n<i>Waiting for social info...</i>`;
     await forwardToTelegram(report1);
     
     kAddMsg("Got it. Just one more thing: What's your Instagram or X handle?");
@@ -298,7 +306,7 @@ async function karioReply(text) {
     kChatState.userData.extra = text;
     
     // PUSH 2: Full Profile
-    const report2 = `<b>✅ COMPLETE LEAD PROFILE</b>\n\n<b>Name:</b> ${kChatState.userData.name}\n<b>Contact:</b> ${kChatState.userData.contact}\n<b>Social:</b> ${kChatState.userData.extra}\n\n<i>System: Secure Lead Routing Active</i>`;
+    const report2 = `<b>✅ COMPLETE LEAD PROFILE</b>\n\n<b>Name:</b> ${kChatState.userData.name}\n<b>Contact:</b> ${kChatState.userData.contact}\n<b>Request:</b> ${kChatState.userData.initialRequest}\n<b>Social:</b> ${kChatState.userData.extra}\n\n<i>System: Secure Lead Routing Active</i>`;
     await forwardToTelegram(report2);
     
     kAddMsg("Thanks! 🥂 I've sent everything to my partners. We'll be in touch soon!");
