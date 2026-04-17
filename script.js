@@ -125,38 +125,7 @@ document.addEventListener('keydown', (e) => {
 
 // ── Motion & Interaction Upgrade ──────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  const cursor = document.querySelector('.custom-cursor');
-  const magneticBtns = document.querySelectorAll('.btn-primary, .navbar-cta, .btn-secondary');
-
-  // 1. Cursor Follower
-  document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-  });
-
-  // Cursor Hover Effects
-  const interactables = document.querySelectorAll('a, button, input, textarea, .comparison-card');
-  interactables.forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-  });
-
-  // 2. Magnetic Buttons
-  magneticBtns.forEach(btn => {
-    btn.addEventListener('mousemove', (e) => {
-      const position = btn.getBoundingClientRect();
-      const x = e.clientX - position.left - position.width / 2;
-      const y = e.clientY - position.top - position.height / 2;
-
-      btn.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
-    });
-
-    btn.addEventListener('mouseleave', () => {
-      btn.style.transform = 'translate(0px, 0px)';
-    });
-  });
-
-  // 3. Smooth Scrolling Logic (Subtle Momentum)
+  // 1. Smooth Scrolling Logic (Subtle Momentum)
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -170,7 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. 3D Background Engine (KARIO AI Aerodynamic Flow)
+  // 3. 3D Background Engine (KARIO AI Aerodynamic Flow)
+  // Optimized for performance: Less waves, slower speed
   if (typeof VANTA !== 'undefined') {
     VANTA.WAVES({
       el: "#vanta-bg",
@@ -182,10 +152,10 @@ document.addEventListener('DOMContentLoaded', () => {
       scale: 1.00,
       scaleMobile: 1.00,
       color: 0x050505,
-      shininess: 35.00,
-      waveHeight: 15.00,
-      waveSpeed: 0.60,
-      zoom: 1.10
+      shininess: 20.00, // Reduced from 35 for performance
+      waveHeight: 12.00, // Reduced from 15
+      waveSpeed: 0.40,  // Slower for smoother feel
+      zoom: 1.00
     });
   }
 });
